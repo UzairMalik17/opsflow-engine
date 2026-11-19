@@ -1,0 +1,25 @@
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Python / uv
+backend/.venv/
+backend/__pycache__/
+backend/.pytest_cache/
+backend/.ruff_cache/
+*.py[cod]
+*.egg-info/
+
+# Node / Vite / pnpm
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+*.log
+
+# OS / Editor
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
