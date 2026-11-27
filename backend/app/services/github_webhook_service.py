@@ -18,9 +18,10 @@ def build_github_webhook_event(
         event_type=event_type,
         action=payload.action,
         repo_full_name=payload.repository.full_name,
-        issue_number=payload.issue.number if payload.issue else None,
-        issue_title=payload.issue.title if payload.issue else None,
-        sender_login=payload.sender.login,
+        issue_number=payload.issue.number,
+        issue_title=payload.issue.title,
+        issue_body=payload.issue.body,
+        sender_login=payload.sender.login if payload.sender else None,
         payload=raw_payload,
         status="received",
     )

@@ -18,11 +18,12 @@ class GithubIssue(BaseModel):
 
     number: int
     title: str
+    body: str
 
 
 class GithubWebhookPayload(BaseModel):
     model_config = ConfigDict(extra="ignore")
     action: str | None = None
     repository: GitHubRepository
-    issue: GithubIssue | None = None
+    issue: GithubIssue
     sender: GithubSender | None = None
